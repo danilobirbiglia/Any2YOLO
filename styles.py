@@ -1,4 +1,4 @@
-# class for defining the application look and feel
+# Application look and feel
 class Styles:
 
     def __init__(self):
