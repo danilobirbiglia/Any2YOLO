@@ -1,4 +1,4 @@
-<img src="any2yolo.ico" alt="Any2YOLO" width="100" />
+<img src="assets/any2yolo.ico" alt="Any2YOLO" width="100" />
 
 # **Any2YOLO**
 
@@ -10,9 +10,9 @@ This tool simplifies dataset preparation for YOLO models, whether you're process
 
 ## 🌟 **Key Features**
 
-- **Batch Conversion**: Upload and process multiple JSON files
+- **Batch Conversion**: Upload and process multiple JSON
 - **Label Selection**: Choose specific labels for YOLO txt format or include all
-- **User-Friendly Interface**: Intuitive gui
+- **User-Friendly Interface**: Intuitive GUI
 - **Detailed Logs**: Monitor every step of the conversion process
 - **Error Handling**: Skips invalid files and provides detailed error logs
 
@@ -27,9 +27,13 @@ This tool simplifies dataset preparation for YOLO models, whether you're process
 # 📦 Installation
 
 ## Clone the Repository
-Clone the repository to your local machine using the following command:
+To get started, clone the repository to your local machine:
 ```bash
+# Clone the repository
 git clone https://github.com/danilobirbiglia/Any2YOLO.git
+
+# Navigate into the project directory
+cd Any2YOLO
 ```
 
 ## Install Dependencies
@@ -55,23 +59,29 @@ To confirm that `tkinter` is properly installed, run:
 ```bash
 python -m tkinter
 ```
-If a small GUI window appears, `tkinter` is correctly installed.
+If a small GUI window appears, `tkinter` is correctly installed
 
 ---
 
 ### **Launching the App**
 
-1. **Run the application**:
+1. Install dependencies:
    ```bash
-   python main.py
+   # Install Python dependencies
+   pip install Pillow
    ```
-2. Follow the on-screen instructions to upload and convert your JSON files
+
+2. Run the application:
+   ```bash
+   python src/main.py
+   ```
+3. Follow the on-screen instructions to upload and convert your JSON files
 
 ---
 
 ## 🖥️ **How It Works**
 
-1. **Run the App**: Start the GUI with `python main.py`
+1. **Run the App**: Start the GUI with `python src/main.py`
 2. **Upload Files**: Click the "📂 Upload JSON Files" button to select one or more files
 3. **Review Labels**: View and select labels extracted from your JSON files
 4. **Convert Files**: Click "Convert" to generate YOLO compatible `.txt` files
@@ -81,15 +91,16 @@ If a small GUI window appears, `tkinter` is correctly installed.
 
 ## 📂 **Project Structure**
 
-| **File**           | **Description**                                       |
-|---------------------|-------------------------------------------------------|
-| `main.py`          | Entry point for the application                      |
-| `gui.py`           | GUI logic for file management and conversion controls|
-| `converter.py`     | Core logic for JSON to YOLO conversion               |
-| `logger.py`        | Manages logging for debugging and troubleshooting    |
-| `styles.py`        | Defines styles for the GUI application               |
-| `any2yolo.ico`     | Icon for the GUI                        |
-| `README.md`        | Project documentation (you’re reading it!)           |
+| **Folder/File**      | **Description**                                       |
+|----------------------|-------------------------------------------------------|
+| `src/main.py`        | Entry point for the application                      |
+| `src/gui.py`         | GUI logic for file management and conversion controls|
+| `src/converter.py`   | Core logic for JSON to YOLO conversion               |
+| `src/logger.py`      | Manages logging for debugging and troubleshooting    |
+| `src/styles.py`      | Defines styles for the GUI application               |
+| `assets/any2yolo.ico`| Icon for the GUI                                      |
+| `logs/converter.log`              | Directory for log                              |
+| `README.md`          | Project documentation (you’re reading it!)           |
 
 ---
 
@@ -122,8 +133,8 @@ If a small GUI window appears, `tkinter` is correctly installed.
 ```
 
 **Steps Taken**:  
-1. Extracted labels: `dog`, `cat` 
-2. Calculated bounding box dimensions and coordinates 
+1. Extracted labels: `dog`, `cat`
+2. Calculated bounding box dimensions and coordinates
 3. Converted to YOLO txt
 
 ---
@@ -154,7 +165,7 @@ Yes! YOLO txt files support both polygons and bounding boxes
 
 ## 📜 **License**
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE)
 
 ---
 
