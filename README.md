@@ -29,13 +29,8 @@ This tool simplifies dataset preparation for YOLO models, whether you're process
    ```bash
    git clone https://github.com/danilobirbiglia/Any2YOLO.git
    ```
-
-2. **Navigate into the directory**:
-   ```bash
-   cd Any2YOLO
-   ```
-
-3. **Install dependencies**:
+   
+2. **Install dependencies**:
 
    ## **For Linux/macOS**:
    Install tkinter and Pillow:
@@ -51,7 +46,7 @@ This tool simplifies dataset preparation for YOLO models, whether you're process
      pip install Pillow
      ```
 
-4. **Verify tkinter installation** (optional):
+3. **Verify tkinter installation** (optional):
    Run the following command to ensure tkinter is properly installed:
    ```bash
    python -m tkinter
