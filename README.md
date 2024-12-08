@@ -4,15 +4,15 @@
 
 **Easily convert [AnyLabeling](https://github.com/vietanhdev/anylabeling) JSON into [YOLO](https://github.com/ultralytics/ultralytics) txt files!**
 
-This tool simplifies dataset preparation for YOLO models, whether you're processing a single JSON file or managing batch conversions with multiple labels.
+This tool simplifies dataset preparation for YOLO models, whether you're processing a single JSON file or managing batch conversions with multiple labels
 
 ---
 
 ## 🌟 **Key Features**
 
-- **Batch Conversion**: Upload and process multiple JSON files at once
+- **Batch Conversion**: Upload and process multiple JSON files
 - **Label Selection**: Choose specific labels for YOLO txt format or include all
-- **User-Friendly Interface**: Intuitive gui for both technical and non-technical users
+- **User-Friendly Interface**: Intuitive gui
 - **Detailed Logs**: Monitor every step of the conversion process
 - **Error Handling**: Skips invalid files and provides detailed error logs
 
@@ -24,35 +24,38 @@ This tool simplifies dataset preparation for YOLO models, whether you're process
 
 - Python 3.8 or newer
 
-### **Installation**
+# 📦 Installation
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/danilobirbiglia/Any2YOLO.git
-   ```
-   
-2. **Install dependencies**:
+## Clone the Repository
+Clone the repository to your local machine using the following command:
+```bash
+git clone https://github.com/danilobirbiglia/Any2YOLO.git
+```
 
-   ## **For Linux/macOS**:
-   Install tkinter and Pillow:
-   ```bash
-   sudo apt-get install python3-tk
-   pip install Pillow
-   ```
+## Install Dependencies
 
-   ## **For Windows**:
-   - Ensure Python is installed with the **tcl/tk and IDLE** option selected during installation
-   - Then install Pillow:
-     ```bash
-     pip install Pillow
-     ```
+### For Linux/macOS
+**Note**: The tool is not fully optimized for Linux/macOS. Some features may have limited functionality
 
-3. **Verify tkinter installation** (optional):
-   Run the following command to ensure tkinter is properly installed:
-   ```bash
-   python -m tkinter
-   ```
-   If a small GUI window appears, `tkinter` is installed correctly
+Install `tkinter` and `Pillow`:
+```bash
+sudo apt-get install python3-tk -y
+pip install Pillow
+```
+
+### For Windows
+- Ensure Python is installed with the **tcl/tk and IDLE** option enabled during the installation process
+- Then, install `Pillow` using:
+  ```bash
+  pip install Pillow
+  ```
+
+## Verify `tkinter` Installation (Optional)
+To confirm that `tkinter` is properly installed, run:
+```bash
+python -m tkinter
+```
+If a small GUI window appears, `tkinter` is correctly installed.
 
 ---
 
@@ -162,5 +165,3 @@ This project is licensed under the [MIT License](LICENSE).
 - **Email**: danilobirbiglia@gmail.com  
 
 ---
-
-Transform your data with inot **YOLO!** 🎉
