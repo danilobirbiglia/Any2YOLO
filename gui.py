@@ -1,6 +1,4 @@
-# GUI for Any2YOLO Converter Application
-# This module defines a user-friendly interface for uploading JSON files, selecting labels and converting data into YOLO-compatible formats
-# It provides features such as responsive design, customizable styles and an help menu
+# GUI for Any2YOLO
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from PIL import Image, ImageTk
@@ -10,10 +8,8 @@ import webbrowser
 
 
 class Any2YOLOApp:
-    #Main GUI Application for Any2YOLO
-
     def __init__(self):
-        #Initialize the application with a window and basic configurations
+        #Initialize the application
 
         self.root = tk.Tk()
         self.root.title("💻Any2YOLO Converter")
@@ -22,7 +18,7 @@ class Any2YOLOApp:
 
         self.root.iconbitmap("any2yolo.ico") # Application icon
 
-        # Variables to manage files and labels
+        # Files and labels
         self.input_files = []
         self.selected_labels = []
         self.available_labels = []
@@ -33,26 +29,25 @@ class Any2YOLOApp:
         self.upload_button = None  # Button for uploading files
         self.convert_button = None  # Button for conversion
 
-        # Setup styles, menu and GUI layout
+        # Setup styles, menu and GUI
         self._setup_styles()
         self._setup_menu()
         self._setup_gui()
 
     def run(self):
-        #Run the application
         self.root.mainloop()
 
     def _setup_styles(self):
-        #Define custom styles for the application
+        # Custom styles
         self.bg_color = "#F9FAFB"  # Light background
         self.header_color = "#005F9E"  # Header color
-        self.button_color = "#007ACC"  # button button
+        self.button_color = "#007ACC"  # Button button
         self.hover_color = "#005F9E"  # Hover color
         self.text_color = "#333333"  # Standard text color
         self.highlight_text_color = "#FF5722" # Highlighted text color
 
     def _setup_menu(self):
-        #Create a menu bar with File and Help options
+        # Menu bar
         menu_bar = tk.Menu(self.root)
 
         # File Menu
@@ -73,11 +68,11 @@ class Any2YOLOApp:
         help_menu.add_command(label="📖 About This App", command=self._about_app)  # About section
         menu_bar.add_cascade(label="Help", menu=help_menu)  # Add Help menu to menu bar
 
-        # Attach the complete menu to the root window
+        # Attach complete menu to root window
         self.root.config(menu=menu_bar)
 
     def _setup_gui(self):
-        #Set up the main GUI layout
+        # Set up main GUI layout
         self.root.geometry("600x400") # Start with a compact window size
 
         # Top Header
@@ -151,7 +146,7 @@ class Any2YOLOApp:
 
 
     def _create_button(self, parent, text, command, centered=False, smaller=False, highlight=False):
-        # Create a styled button with hover effects
+        # Button with hover effects
         bg_color = self.button_color if not highlight else "#FF5722"  # Highlight for important buttons
         hover_color = self.hover_color if not highlight else "#E64A19"
 
@@ -183,7 +178,7 @@ class Any2YOLOApp:
         self.scroll_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
     def _setup_header(self):
-        # Setup the application header
+        # Application header
         frame_top = tk.Frame(self.root, bg=self.header_color, pady=10)
         frame_top.pack(fill=tk.X)
 
@@ -200,7 +195,7 @@ class Any2YOLOApp:
         ).pack(side=tk.LEFT)
 
     def _setup_middle_section(self):
-        # Setup the scrollable middle section
+        # Scrollable middle section
         self.scroll_frame = tk.Frame(self.root, bg=self.bg_color)
         self.scroll_frame.pack(fill=tk.BOTH, expand=True)
 
@@ -219,7 +214,7 @@ class Any2YOLOApp:
         self.canvas.configure(yscrollcommand=self.scrollbar.set)
 
     def _setup_footer(self):
-        # Setup the footer with the convert button
+        # Footer with convert button
         self.convert_button = tk.Button(
             self.root,
             text="Convert",
@@ -615,5 +610,5 @@ class Any2YOLOApp:
         self._create_button(manual_window, "Close", manual_window.destroy, centered=True).pack(pady=10)
     
     def _open_url(self, url):
-        # Open a URL in the default web browser, why this? I really don't know ....... Just linkedin and mail :)
+        # Open a URL in the default web browser, why this? ....... Just linkedin and mail
         webbrowser.open_new(url)
