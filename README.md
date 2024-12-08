@@ -1,3 +1,4 @@
+<img src="any2yolo.ico" alt="Any2YOLO" width="100" />
 
 # **Any2YOLO**
 
