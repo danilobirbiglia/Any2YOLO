@@ -1,11 +1,4 @@
-# This module defines the `JSONToTXTConverter` class for converting annotation data from JSON format 
-# into YOLO-compatible TXT files
-# The class includes functionalities for:
-# - Extracting unique labels and mapping them to respective files
-# - Validating and processing JSON files
-# - Calculating YOLO-format bounding boxes from polygon annotations
-# - Generating TXT output files in YOLO format
-# - Logging every step for debugging and transparency
+# Converts annotation data from JSON format into YOLO-compatible TXT files
 
 # The conversion assumes:
 # - JSON files contain "shapes" with polygon data
@@ -45,7 +38,7 @@ class JSONToTXTConverter:
         return sorted(unique_labels), file_label_map
 
     def convert_files(self):
-        # Convert provided JSON files to YOLO TXT format
+        # Convert JSON to YOLO txt
         logging.info("Starting file conversion...")
         results = {}
 
