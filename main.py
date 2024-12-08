@@ -1,6 +1,4 @@
-# Welcome to the Any2YOLO
-# Transform your JSON into YOLO compatible because YOLO, right?
-# Just fire this up, sit back and let the conversion wizards work their magic
+# Welcome to Any2YOLO
 import tkinter as tk
 from gui import Any2YOLOApp
 
